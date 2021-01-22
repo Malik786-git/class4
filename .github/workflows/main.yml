@@ -40,4 +40,4 @@ jobs:
         run: npm install -g surge
         
       - name: deploye surge
-        run: surge ./build http://http://classbootcampfour.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build http://classbootcampfour.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
