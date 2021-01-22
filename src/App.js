@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React,{ useState } from 'react';
+import Counter from './Counter.js'
 import './App.css';
 
 function App() {
+ let [count, setCount] = useState(1);
+ let [isMorning, setMorning] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`Evening ${isMorning ? 'Morning' : ''}`}>
+        <Counter counter = {count}/>
+        <button
+          onClick={ ()=> setCount(++count)}
+        >Counter Update</button>
+
+        <h1>Good {isMorning ? 'Morning' : 'Evening'}</h1>
+        <button
+         onClick={ ()=> setMorning(!isMorning)}
+        >Set Day</button>
     </div>
   );
 }
