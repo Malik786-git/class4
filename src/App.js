@@ -12,7 +12,7 @@ function App() {
           onClick={ ()=> setCount(++count)}
         >Counter Update</button>
 
-        <h1>Good {isMorning ? 'Morning' : 'Evening'}</h1>
+        <h1>Good  {isMorning ? 'Morning !' : 'Evening !'}</h1>
         <button
          onClick={ ()=> setMorning(!isMorning)}
         >Set Day</button>
